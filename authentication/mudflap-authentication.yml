@@ -1,0 +1,55 @@
+generated: '2026-07-20'
+method: searched
+source: https://api.mudflapinc.com/.well-known/oauth-authorization-server
+docs: https://api.mudflapinc.com/.well-known/oauth-authorization-server
+summary:
+  types:
+  - oauth2
+  - openIdConnect
+  oauth2_flows:
+  - authorizationCode
+  - password
+  oidc: true
+issuer: https://dashboard.mudflapinc.com
+schemes:
+- name: OAuth2
+  type: oauth2
+  source: https://api.mudflapinc.com/.well-known/oauth-authorization-server
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.mudflapinc.com/oauth/authorize
+    tokenUrl: https://api.mudflapinc.com/oauth/token
+    scopes:
+    - openid
+    - profile
+    - email
+  - flow: password
+    tokenUrl: https://api.mudflapinc.com/oauth/token
+    scopes:
+    - openid
+    - profile
+    - email
+  revocation_endpoint: https://api.mudflapinc.com/oauth_logout
+  response_types_supported:
+  - code
+  token_endpoint_auth_methods_supported:
+  - client_secret_post
+  - client_secret_basic
+- name: OpenIDConnect
+  type: openIdConnect
+  source: https://api.mudflapinc.com/.well-known/oauth-authorization-server
+  id_token_signing_alg_values_supported:
+  - RS256
+  subject_types_supported:
+  - public
+  claims_supported:
+  - sub
+  - email
+  - name
+  - preferred_username
+notes: >-
+  Derived from the RFC 8414 OAuth 2.0 Authorization Server Metadata document
+  published at api.mudflapinc.com. Mudflap runs an OAuth2 / OIDC provider
+  (authorization_code + resource-owner password grants, RS256 id_tokens).
+  No public OpenAPI is published; the protected API surface behind this
+  authorization server is partner/fleet-facing and not publicly documented.

@@ -1,9 +1,32 @@
 aid: mudflap
 name: Mudflap
-description: 'Mudflap is a company surfaced as a portfolio company of matrix-partners and added to the
-  API Evangelist network as a stub for enrichment. Sector: fintech. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: >-
+  Mudflap is a fintech company operating a diesel fuel-discount network for
+  truckers, owner-operators, and fleets. Its mobile app delivers instant
+  cost-plus diesel discounts (up to $1.00/gallon) at 3,600+ truck stops using a
+  driver's existing debit or credit card, and its Mudflap Fuel Card extends
+  fleet credit terms, driver spend controls, and fraud protection across 70,000+
+  fuel stops nationwide, managed through a fleet dashboard. Mudflap reports
+  $1B+ saved by 515,000+ active drivers and is recommended by 94% of
+  owner-operators and fleets. It also runs a truck-stop merchant program and a
+  Geotab telematics integration. Mudflap is backed by Matrix Partners. The
+  company exposes an OAuth 2.0 / OpenID Connect authorization server at
+  api.mudflapinc.com for its partner, fleet, and merchant surfaces; no public
+  developer OpenAPI is published.
 url: https://raw.githubusercontent.com/api-evangelist/mudflap/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/663e75126ab14bc3a56a0e08/66bfbffec2941b37b6c31a3c_og-brand.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,11 +35,33 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Fintech
-apis: []
+- Fuel
+- Trucking
+- Payments
+- Fleet Management
+- Logistics
+- Fuel Card
+apis:
+- name: Mudflap Partner API
+  description: >-
+    OAuth 2.0 / OpenID Connect protected API surface serving Mudflap's partner,
+    fleet, and merchant dashboards. Discovered via the published RFC 8414
+    authorization-server metadata; no public OpenAPI reference is available.
+  humanURL: https://partner.mudflapinc.com/
+  baseURL: https://api.mudflapinc.com
+  tags:
+  - Fuel
+  - Payments
+  - OAuth
+  properties:
+  - type: Authentication
+    url: authentication/mudflap-authentication.yml
+  - type: OAuthScopes
+    url: scopes/mudflap-scopes.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +70,34 @@ maintainers:
 common:
 - type: Website
   url: https://mudflapinc.com
+- type: Portal
+  url: https://partner.mudflapinc.com/
+- type: GettingStarted
+  url: https://www.mudflapinc.com/app/how-it-works
+- type: Support
+  url: https://www.mudflapinc.com/contact
+- type: TermsOfService
+  url: https://www.mudflapinc.com/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://www.mudflapinc.com/privacy
+- type: LLMsTxt
+  url: llms/mudflap-llms.txt
+- type: WellKnown
+  url: well-known/mudflap-well-known.yml
+- type: Authentication
+  url: authentication/mudflap-authentication.yml
+- type: OpenIDConnect
+  url: authentication/mudflap-authentication.yml
+- type: OAuthScopes
+  url: scopes/mudflap-scopes.yml
+- type: Conventions
+  url: conventions/mudflap-conventions.yml
+- type: Conformance
+  url: conformance/mudflap-conformance.yml
+- type: DomainSecurity
+  url: security/mudflap-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v1

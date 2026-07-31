@@ -1,0 +1,36 @@
+generated: '2026-07-20'
+method: searched
+source: https://api.mudflapinc.com/.well-known/oauth-authorization-server
+authentication:
+  style: oauth2-bearer
+  model: OAuth 2.0 / OpenID Connect (Doorkeeper-style provider)
+  flows:
+  - authorization_code
+  - password
+  scopes:
+  - openid
+  - profile
+  - email
+  authorization_url: https://api.mudflapinc.com/oauth/authorize
+  token_url: https://api.mudflapinc.com/oauth/token
+  revocation_url: https://api.mudflapinc.com/oauth_logout
+  ref: authentication/mudflap-authentication.yml
+idempotency:
+  supported: unknown
+  note: No public documentation of an idempotency-key contract; not asserted.
+pagination:
+  style: unknown
+  note: No public API reference published.
+versioning:
+  scheme: unknown
+  note: No public API reference published.
+error_envelope:
+  shape: unknown
+  note: No public error reference published.
+notes: >-
+  Mudflap exposes an OAuth2/OIDC authorization server at api.mudflapinc.com but
+  does not publish a public OpenAPI spec or developer reference. Cross-cutting
+  request/response conventions (pagination, idempotency, error envelope,
+  versioning) are therefore not documented publicly and are recorded as unknown
+  rather than fabricated. Only the authentication convention is verifiable from
+  the RFC 8414 metadata document.

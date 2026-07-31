@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: searched
+source: live probe of Mudflap hosts
+host: https://api.mudflapinc.com
+documents:
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: mudflap-oauth-authorization-server.json
+  standard: RFC 8414
+  note: also served 200 at https://dashboard.mudflapinc.com/.well-known/oauth-authorization-server
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/oauth-authorization-server (dashboard issuer)
+  status: 200
+other_probes:
+- url: https://www.mudflapinc.com/.well-known/security.txt
+  status: 404
+- url: https://mudflapinc.com/.well-known/security.txt
+  status: 404

@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: searched
+source: https://api.mudflapinc.com/.well-known/oauth-authorization-server
+docs: https://api.mudflapinc.com/.well-known/oauth-authorization-server
+schemes:
+- name: OAuth2
+  source: https://api.mudflapinc.com/.well-known/oauth-authorization-server
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.mudflapinc.com/oauth/authorize
+    tokenUrl: https://api.mudflapinc.com/oauth/token
+  - flow: password
+    tokenUrl: https://api.mudflapinc.com/oauth/token
+scopes:
+- scope: openid
+  description: OpenID Connect authentication; issue an id_token identifying the end user.
+  flows:
+  - authorizationCode
+  - password
+  sources:
+  - https://api.mudflapinc.com/.well-known/oauth-authorization-server
+- scope: profile
+  description: Access to the end user's basic profile claims (name, preferred_username).
+  flows:
+  - authorizationCode
+  - password
+  sources:
+  - https://api.mudflapinc.com/.well-known/oauth-authorization-server
+- scope: email
+  description: Access to the end user's email address claim.
+  flows:
+  - authorizationCode
+  - password
+  sources:
+  - https://api.mudflapinc.com/.well-known/oauth-authorization-server
