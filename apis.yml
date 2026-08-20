@@ -56,6 +56,10 @@ apis:
   tags:
   - Fuel
   - Payments
+  - Authentication
+  tags_raw:
+  - Fuel
+  - Payments
   - OAuth
   properties:
   - type: Authentication
