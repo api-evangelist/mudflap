@@ -64,6 +64,95 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Mudflap is a company surfaced as a portfolio company of matrix-partners and added to the API Evangelist network as a stub for enrichment. Sector: fintech. This profile is a lead awaiting the enrichment pipeline.
+Mudflap is a fintech company operating a diesel fuel-discount network for truckers, owner-operators, and fleets. Its mobile app delivers instant cost-plus diesel discounts (up to $1.00/gallon) at 3,600+ truck stops using a driver's existing debit or credit card, and its Mudflap Fuel Card extends fleet credit terms, driver spend controls, and fraud protection across 70,000+ fuel stops nationwide, managed through a fleet dashboard. Mudflap reports $1B+ saved by 515,000+ active drivers and is recommended by 94% of owner-operators and fleets. It also runs a truck-stop merchant program and a Geotab telematics integration. Mudflap is backed by Matrix Partners. The company exposes an OAuth 2.0 / OpenID Connect authorization server at api.mudflapinc.com for its partner, fleet, and merchant surfaces; no public developer OpenAPI is published.
 
-Backed by: matrix-partners — https://mudflapinc.com
+**Areas:** Company · Fintech · Fuel · Trucking · Payments · Fleet Management · Logistics · Fuel Card
+
+## Mudflap on APIs.io
+
+Everything profiled for Mudflap is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/mudflap/](https://apis.io/providers/mudflap/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Mudflap Partner API](https://apis.io/apis/mudflap/mudflap-partner-api/) — OAuth 2.0 / OpenID Connect protected API surface serving Mudflap's partner, fleet, and merchant dashboards. Discovered via the published RFC 8414…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Mudflap Authentication](https://apis.io/security/mudflap/mudflap-authentication/)
+- [Mudflap Domain Security](https://apis.io/security/mudflap/mudflap-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Mudflap Scopes](https://apis.io/scopes/mudflap/mudflap-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://mudflapinc.com)
+- [Getting started](https://www.mudflapinc.com/app/how-it-works)
+- [Support](https://www.mudflapinc.com/contact)
+- [Blog](https://www.mudflapinc.com/press)
+- [Terms of service](https://www.mudflapinc.com/terms-and-conditions)
+- [Privacy policy](https://www.mudflapinc.com/privacy)
+
+## API Evangelist rating
+
+**Kin Score 23.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 40.5 |
+| Access clarity | 21.1 |
+
+**Agent readiness 10.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 31.3** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/mudflap/](https://apis.io/providers/mudflap/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Mudflap: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/mudflap/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
